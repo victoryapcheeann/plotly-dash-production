@@ -6,7 +6,12 @@ import plotly.express as px
 import dash_extensions as de
 px.set_mapbox_access_token('pk.eyJ1IjoidmljdG9yeWFwIiwiYSI6ImNqZGljMm4wdzE2OHEzMW5xamFqMGNiNXcifQ.VBHGRcYrbq9wIer87aNUfA')
 
-from app import app
+import dash
+
+app = dash.Dash(__name__, 
+                title="SAT Score Analysis",
+                suppress_callback_exceptions=True)
+server = app.server
 
 data = pd.read_csv('data/final_data.csv')
 data_2 = pd.read_csv('data/wtf.csv')

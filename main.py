@@ -2,7 +2,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_extensions as de
-from apps import app2, app1, home
+from apps import home
 import dash
 
 app = dash.Dash(__name__, 
@@ -34,11 +34,7 @@ app.layout = html.Div([
 @app.callback(Output('page-content', 'children'),
               Input('url', 'pathname'))
 def display_page(pathname):
-    if pathname == '/credit':
-        return app1.layout
-    elif pathname == '/about':
-        return app2.layout
-    elif pathname == '/home':
+    if pathname == '/home':
         return home.layout
     else:
         return home.layout
