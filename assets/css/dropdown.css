@@ -1,0 +1,42 @@
+/* Dash Dropdown */
+.dash-dropdown {
+    width: 300px !important;
+}
+
+.has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label {
+    color: white !important
+}
+
+.Select-control {
+    background: rgb(78,198,251);
+    background: linear-gradient(270deg, #2398ff 0%, rgba(0,0,0,1) 32%);
+    border: 1px solid black;
+    box-shadow: 1px 1px 10px 1px #2398ff;
+}
+
+.Select-value, .VirtualizedSelectFocusedOption, .VirtualizedSelectOption {
+    background: linear-gradient(270deg, #2398ff 0%, rgba(0,0,0,1) 32%) !important;
+    color: white;
+}
+
+.Select-arrow {
+    border-color: white transparent transparent; 
+}
+
+.Select-clear-zone {
+    display: none !important;
+}
+
+.dropdownContainer {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    justify-content: space-around;
+}
+
+.dropdownContainer div p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
