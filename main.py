@@ -2,9 +2,13 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_extensions as de
-
-from app import app
 from apps import app2, app1, home
+import dash
+
+app = dash.Dash(__name__, 
+                title="SAT Score Analysis",
+                suppress_callback_exceptions=True)
+server = app.server
 
 url = "https://assets8.lottiefiles.com/packages/lf20_2RSPTv.json"
 url2 = "https://assets9.lottiefiles.com/packages/lf20_CYBIbn.json"
